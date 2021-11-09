@@ -66,6 +66,7 @@ h2 {
     background-size: cover;
     background-position: center center;
     position: relative;
+    background-attachment: fixed;
 }
 .hero .logo {
     width: 4rem;
@@ -286,6 +287,119 @@ color: var(--lite-blue);
     }
 }
 /********** Services Section ********/
+
+/********** About Section ********/
+.about .section-title {
+    display: none;
+}
+.about {
+    /*background-image: url(images/about.jpg);*/
+    /*background-position: center center;*/
+    /*background-size: cover;*/
+    background-color: #1c2427;
+    height: 100%;
+    color: #fff;
+}
+.about .container {
+    margin: 0;
+    padding: 2rem 5rem;
+}
+.about-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4rem;
+}
+.aside {
+    min-width: 300px;
+    flex-grow: 1;
+    padding: 2rem;
+    position: relative;
+}
+.box {
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: rotate(-90deg) translate(-100%);
+    transform-origin: left;
+}
+.aside .about-us {
+    position: absolute;
+    top: 0;
+}
+.aside .services {
+    position: absolute;
+    top: 40%;
+}
+.main {
+    padding: 2rem;
+    flex-grow: 3;
+}
+.about-us-box {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+.about-us-box h4 {
+    font-size: 1.5rem;
+    line-height: 2;
+}
+.services-box {
+    display: flex;
+    padding: 3rem .5rem;
+}
+.sbox {
+    width: 100%;
+    min-width: 300px;
+    padding: 1rem;
+    text-align: left;
+    line-height: 2;
+}
+.sbox h4 {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+@media all and (max-width: 768px){
+    .about .section-title {
+        display: block;
+    }
+    .about .section-title h3::after {
+        background-color: #fff;
+    }
+    .about .container {
+        margin: 0;
+        padding: 1rem;
+    }
+    .main {
+        padding: 1rem;
+        flex-grow: 1;
+    }
+    .about-us-box {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .about-content {
+        flex-direction: column;
+        width: 100%;
+    }
+    .aside {
+        display: none;
+    }
+    .main {
+        padding: 0;
+        width: 100%;
+    }
+    .services-box {
+        display: flex;
+        flex-direction: column;
+        padding: .5rem;
+    }
+}
+/********** About Section ********/
     .mainBox {
         width: 100%;
         height: 380px;
@@ -623,3 +737,90 @@ color: var(--lite-blue);
     }
 }
 /********* Article Section ************/
+/********* Footer Section ************/
+footer {
+    background-color: #1c2427;
+    padding: 4rem 0;
+    margin-top: 4rem;
+}
+footer .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+footer .container {
+    max-width: 1170px;
+    margin: auto;
+}
+footer .footer-col {
+    width: 25%;
+    padding: 0 1.5rem;
+}
+.footer-col h4 {
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before {
+    position: absolute;
+    content: '';
+    bottom: -10px;
+    left: 0;
+    background-color: var(--lite-grey);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 1rem;
+}
+.footer-col ul li a {
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    font-weight: 300;
+    color: var(--lite-blue);
+    display: block;
+    transition: all .3s ease;
+}
+.footer-col ul li a:hover {
+    color: var(--primary-color);
+    padding-left: 8px;
+}
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, .2);
+    margin: 0 1rem 1rem 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: var(--lite-grey);
+    padding-left: .5rem;
+    transition: all .3s ease;
+}
+.footer-col .social-links a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+@media only screen and (max-width: 767px) {
+    .footer-col {
+        width: 50% !important;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100% !important;
+        margin-bottom: 30px;
+    }
+}
+.base {
+    display: block;
+    text-align: center;
+    color: var(--lite-grey);
+}
+
+/********* Footer Section ************/
